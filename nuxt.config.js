@@ -13,6 +13,9 @@ export default {
       lang: 'ja',
       prefix: 'og: http://ogp.me/ns#',
     },
+    base: {
+      href: 'router.base',
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
