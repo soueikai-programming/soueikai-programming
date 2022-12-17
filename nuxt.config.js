@@ -4,14 +4,21 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'soueikai-programming',
+    title: 'CPBase - 創営会プログラミング課',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'ja',
+      prefix: 'og: http://ogp.me/ns#',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'CPBase(創営会プログラミング課)の公式サイトです。活動等について紹介しています。' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'CPBase - 創営会プログラミング課' },
+      { hid: 'og:title', property: 'og:title', content: 'CPBase公式サイト' },
+      { hid: 'og:description', property: 'og:description', content: 'CPBase(創営会プログラミング課)の公式サイトです。活動等について紹介しています。' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: 'https://cpbase.social/' },
+      { hid: 'og:image', property: 'og:image', content: 'https://cpbase.social/ogp.webp' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
