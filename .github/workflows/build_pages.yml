@@ -7,20 +7,20 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-      steps:
-        - name: ♨️checkout
-          uses: actions/checkout@v2
-          with:
-          presist-credentials: false
+    steps:
+      - name: ♨️Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
         
-        - name: 🔗Install then Build
-          run: |
-            yarn
-            yarn build
+      - name: 🔗Install then Build
+        run: |
+          yarn
+          yarn build
         
-        - name: 🚩Deploy
-          uses: JamesIves/github-pages-deploy-action@releases/v3
-          with:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            BRANCH: gh-pages
-            FOLDER: dist
+      - name: 🚩Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: dist
