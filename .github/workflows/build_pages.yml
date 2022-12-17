@@ -1,0 +1,26 @@
+name: Build Pages and Deploy to GitHubPages
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+      steps:
+        - name: ♨️checkout
+          uses: actions/checkout@v2
+          with:
+          presist-credentials: false
+        
+        - name: 🔗Install then Build
+          run: |
+            yarn
+            yarn build
+        
+        - name: 🚩Deploy
+          uses: JamesIves/github-pages-deploy-action@releases/v3
+          with:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            BRANCH: gh-pages
+            FOLDER: dist
